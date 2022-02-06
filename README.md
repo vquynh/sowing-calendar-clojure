@@ -6,7 +6,7 @@ A web app built in clojure with leiningen that gives list of seeds to sow in a g
 - Install [Clojure](https://clojure.org/guides/getting_started)
 - Install [Leiningen](https://leiningen.org/)
 ### Start the app
-- In project's root, execute ``lein run`` in your console terminal of choice. 
+- At project's root, execute ``lein run`` in your console terminal of choice. 
 - Once the console output says ``System started``, the application is ready at http://localhost:8080
 - Demo #1: input field
 - ![Input](resources/img/input.png)
