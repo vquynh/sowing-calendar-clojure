@@ -16,12 +16,12 @@
     (res/redirect (str "/" uuid) :see-other)))
 
 (defn handle-index
-  "We get there when we are displaying the index page, prompting for a new request."
+  "On index page, a form is rendered with the text field to enter a month and a submit button to send the request."
   [request]
   (res/response (view/render-form)))
 
 (defn index-handler
-  "Handle requests sent to our root URL.
+  "Handle requests sent to root URL.
 
   They can be either GET requests (the user is looking at the form), or POST
   requests (the user just POSTed a new request)."
@@ -36,7 +36,7 @@
     (res/response (view/render-response (:content request)))))
 
 (defn handler
-  "Get the handler function for our routes."
+  "Get the handler function for the routes: root path for index and /uuid path for showing response for given request"
   [store]
   (make-handler ["/" {"" (partial index-handler store)
                       [:uuid] (partial request-handler store)}]))
